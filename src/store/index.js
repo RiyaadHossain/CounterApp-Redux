@@ -2,9 +2,10 @@
 
 // Reducer Function
 const reducerFn = (state = { counter: 0 }, actions) => {
-    if (actions.type === 'INC') return {counter : state.counter + 1} // To Increment
-    if (actions.type === 'DEC') return {counter : state.counter - 1} // To Decrement
-    return state
+  if (actions.type === 'INC') return {counter : state.counter + 1} // To Increment
+  if (actions.type === 'DEC') return {counter : state.counter - 1} // To Decrement
+  if(actions.type === "ADD_BY_10") return {counter : state.counter + actions.payload} // To Add By 10
+  return state
 };
 
 // Create Store
